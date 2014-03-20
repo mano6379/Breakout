@@ -7,8 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "PaddleView.h"
 
 @interface ViewController ()
+{
+    UIDynamicAnimator *dynamicAnimator;
+    PaddleView* paddleView;
+}
 
 @end
 
@@ -17,13 +22,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    dynamicAnimator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
+- (IBAction)dragPaddle:(UIPanGestureRecognizer*)panGestureRecognizer
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    paddleView.center = CGPointMake([panGestureRecognizer locationInView:self.view].x,paddleView.center.y);
+    [dynamicAnimator updateItemUsingCurrentState:paddleView];
 }
 
 @end
