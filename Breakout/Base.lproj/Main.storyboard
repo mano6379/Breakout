@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NSd-5a-gfW" customClass="PaddleView">
-                                <rect key="frame" x="100" y="366" width="121" height="10"/>
+                                <rect key="frame" x="85" y="365" width="136" height="11"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -25,9 +25,18 @@
                                     <outletCollection property="gestureRecognizers" destination="uG6-Hb-0R1" appends="YES" id="91i-Fr-kzE"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ad9-Eu-wu9" customClass="BallView">
+                                <rect key="frame" x="129" y="75" width="23" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.25098040699958801" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="ballView" destination="Ad9-Eu-wu9" id="0zH-Wf-LS7"/>
+                        <outlet property="paddleView" destination="NSd-5a-gfW" id="5bC-fm-Q9j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="uG6-Hb-0R1">
@@ -35,6 +44,23 @@
                         <action selector="dragPaddle:" destination="vXZ-lx-hvc" id="HeL-Vo-CGo"/>
                     </connections>
                 </panGestureRecognizer>
+            </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Yxx-oV-Csx">
+            <objects>
+                <viewController id="xzR-yE-mu3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xZD-gk-RGR"/>
+                        <viewControllerLayoutGuide type="bottom" id="0RN-Nj-2oc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nHo-A6-3DE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1zs-bA-Zc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>

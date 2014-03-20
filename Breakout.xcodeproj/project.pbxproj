@@ -22,6 +22,7 @@
 		D01C654118DB721400E86F7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D01C653F18DB721400E86F7E /* InfoPlist.strings */; };
 		D01C654318DB721400E86F7E /* BreakoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D01C654218DB721400E86F7E /* BreakoutTests.m */; };
 		D01C654E18DB74FE00E86F7E /* PaddleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D01C654D18DB74FE00E86F7E /* PaddleView.m */; };
+		D03D445F18DB7D1A004E50D2 /* BallView.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D445E18DB7D1A004E50D2 /* BallView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		D01C654218DB721400E86F7E /* BreakoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BreakoutTests.m; sourceTree = "<group>"; };
 		D01C654C18DB74FE00E86F7E /* PaddleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaddleView.h; sourceTree = "<group>"; };
 		D01C654D18DB74FE00E86F7E /* PaddleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaddleView.m; sourceTree = "<group>"; };
+		D03D445D18DB7D1A004E50D2 /* BallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallView.h; sourceTree = "<group>"; };
+		D03D445E18DB7D1A004E50D2 /* BallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				D01C652618DB721400E86F7E /* AppDelegate.h */,
 				D01C652718DB721400E86F7E /* AppDelegate.m */,
 				D01C652918DB721400E86F7E /* Main.storyboard */,
+				D03D445D18DB7D1A004E50D2 /* BallView.h */,
+				D03D445E18DB7D1A004E50D2 /* BallView.m */,
 				D01C654C18DB74FE00E86F7E /* PaddleView.h */,
 				D01C654D18DB74FE00E86F7E /* PaddleView.m */,
 				D01C652C18DB721400E86F7E /* ViewController.h */,
@@ -256,6 +261,7 @@
 			files = (
 				D01C654E18DB74FE00E86F7E /* PaddleView.m in Sources */,
 				D01C652E18DB721400E86F7E /* ViewController.m in Sources */,
+				D03D445F18DB7D1A004E50D2 /* BallView.m in Sources */,
 				D01C652818DB721400E86F7E /* AppDelegate.m in Sources */,
 				D01C652418DB721400E86F7E /* main.m in Sources */,
 			);
@@ -462,6 +468,7 @@
 				D01C654818DB721400E86F7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D01C654918DB721400E86F7E /* Build configuration list for PBXNativeTarget "BreakoutTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +477,7 @@
 				D01C654B18DB721400E86F7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

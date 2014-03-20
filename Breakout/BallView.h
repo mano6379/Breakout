@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BallView.h
 //  Breakout
 //
 //  Created by Marion Ano on 3/20/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UICollisionBehaviorDelegate>
+@interface BallView : UIView
 
 @end
