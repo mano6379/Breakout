@@ -10,4 +10,5 @@
 
 @interface BlockView : UIView
 
+-(void) howBlocksAppear;
 @end
