@@ -90,7 +90,7 @@
     collisionBehavior = [[UICollisionBehavior alloc]initWithItems:@[ballView, paddleView, self.myTestBlockOne, self.myTestBlockTwo, self.myTestBlockThree, self.myTestBlockFour, self.myTestBlockFive, self.myTestBlockSix, self.myTestBlockSeven, self.myTestBlockEight]];
     ballDynamicBehavior = [[UIDynamicItemBehavior alloc]initWithItems:@[ballView]];
     paddleDynamicBehavior = [[UIDynamicItemBehavior alloc]initWithItems:@[paddleView]];
-    blockDynamicBehavior = [[UIDynamicItemBehavior alloc]initWithItems:@[blockView]];
+    blockDynamicBehavior = [[UIDynamicItemBehavior alloc]initWithItems:@[blockView, self.myTestBlockOne, self.myTestBlockTwo, self.myTestBlockThree, self.myTestBlockFour, self.myTestBlockFive, self.myTestBlockSix, self.myTestBlockSeven, self.myTestBlockEight ]];
     
     pushBehavior.pushDirection = CGVectorMake(0.5, 1.0);
     pushBehavior.active = YES;
@@ -135,6 +135,7 @@
     //origin.y is the y coordinate relative to the main UIView
     if (ballView.frame.origin.y >= (self.view.frame.size.height-(ballView.frame.size.height*2)))
     {
+        [UIView animateWithDuration:10.0 animations:^{ballView.backgroundColor = [UIColor greenColor];}];
         ballView.center = self.view.center;
         [dynamicAnimator updateItemUsingCurrentState:ballView];
     }
@@ -147,12 +148,17 @@
     //for(myBlocks *myBlockViews in self.view.subviews)
     //if ([item2 isKindOfClass:[BlockView class]])
     
-    if ([item2 isMemberOfClass:[BlockView class]])
+    if ([item2 isKindOfClass:[BlockView class]])
  {
+//     [UIView animateWithDuration:10.0 animations:^{[(BallView*)item2] setBackgroundColor = [UIColor greenColor]
+//         ;}];
+     
+     [(BlockView*)item2 setBackgroundColor:[UIColor orangeColor]];
      [collisionBehavior removeItem:item2];
      [myBlocks removeObject:item2];
      //you can only remove a view from itʻs Superview
      [(BlockView*)item2 removeFromSuperview];
+     //[dynamicAnimator ]
      [dynamicAnimator updateItemUsingCurrentState:item2];
  }
     if ([myBlocks count] == 0)
@@ -162,6 +168,7 @@
     }
     
 }
+
 
 -(void) resetGame
 {
