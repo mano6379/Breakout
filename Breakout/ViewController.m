@@ -24,6 +24,7 @@
     IBOutlet BlockView *blockView;
     //create an NSMutalable array of myBlock objects
     NSMutableArray *myBlocks;
+    BOOL shouldStartAgain;
 }
 
 @property BlockView* myTestBlockOne;
@@ -45,6 +46,7 @@
 {
     [super viewDidLoad];
     
+    shouldStartAgain = NO;
     
     //Creating blockView objects programatically
     self.myTestBlockOne = [[BlockView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
@@ -152,14 +154,18 @@
      //you can only remove a view from itʻs Superview
      [(BlockView*)item2 removeFromSuperview];
      [dynamicAnimator updateItemUsingCurrentState:item2];
-     //[collisionBehavior re]
  }
+    if ([myBlocks count] == 0)
+    {
+        shouldStartAgain = YES;
+        [self resetGame];
+    }
     
 }
 
--(void) addBlocksToView
+-(void) resetGame
 {
-    
+    [self viewDidLoad];
 }
         //id item that is blockview
 //    if ([item1 isKindOfClass:[BlockView class]])
