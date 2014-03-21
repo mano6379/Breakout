@@ -23,6 +23,7 @@
 		D01C654318DB721400E86F7E /* BreakoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D01C654218DB721400E86F7E /* BreakoutTests.m */; };
 		D01C654E18DB74FE00E86F7E /* PaddleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D01C654D18DB74FE00E86F7E /* PaddleView.m */; };
 		D03D445F18DB7D1A004E50D2 /* BallView.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D445E18DB7D1A004E50D2 /* BallView.m */; };
+		D03D446518DBBFD6004E50D2 /* BlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D446418DBBFD6004E50D2 /* BlockView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		D01C654D18DB74FE00E86F7E /* PaddleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaddleView.m; sourceTree = "<group>"; };
 		D03D445D18DB7D1A004E50D2 /* BallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallView.h; sourceTree = "<group>"; };
 		D03D445E18DB7D1A004E50D2 /* BallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallView.m; sourceTree = "<group>"; };
+		D03D446318DBBFD6004E50D2 /* BlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockView.h; sourceTree = "<group>"; };
+		D03D446418DBBFD6004E50D2 /* BlockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 				D01C652918DB721400E86F7E /* Main.storyboard */,
 				D03D445D18DB7D1A004E50D2 /* BallView.h */,
 				D03D445E18DB7D1A004E50D2 /* BallView.m */,
+				D03D446318DBBFD6004E50D2 /* BlockView.h */,
+				D03D446418DBBFD6004E50D2 /* BlockView.m */,
 				D01C654C18DB74FE00E86F7E /* PaddleView.h */,
 				D01C654D18DB74FE00E86F7E /* PaddleView.m */,
 				D01C652C18DB721400E86F7E /* ViewController.h */,
@@ -259,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D03D446518DBBFD6004E50D2 /* BlockView.m in Sources */,
 				D01C654E18DB74FE00E86F7E /* PaddleView.m in Sources */,
 				D01C652E18DB721400E86F7E /* ViewController.m in Sources */,
 				D03D445F18DB7D1A004E50D2 /* BallView.m in Sources */,

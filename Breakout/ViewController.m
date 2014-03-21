@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "PaddleView.h"
 #import "BallView.h"
+#import "BlockView.h"
 
 @interface ViewController () 
 {
@@ -19,6 +20,8 @@
     IBOutlet PaddleView *paddleView;
     UIDynamicItemBehavior* ballDynamicBehavior;
     UIDynamicItemBehavior* paddleDynamicBehavior;
+    UIDynamicItemBehavior* blockDynamicBehavior;
+    IBOutlet BlockView *blockView;
 }
 
 @end
@@ -32,15 +35,17 @@
     
     dynamicAnimator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
 	pushBehavior = [[UIPushBehavior alloc]initWithItems:@[ballView] mode:UIPushBehaviorModeInstantaneous];
-    collisionBehavior = [[UICollisionBehavior alloc]initWithItems:@[ballView,paddleView]];
+    collisionBehavior = [[UICollisionBehavior alloc]initWithItems:@[ballView,paddleView, blockView]];
     ballDynamicBehavior = [[UIDynamicItemBehavior alloc]initWithItems:@[ballView]];
     paddleDynamicBehavior = [[UIDynamicItemBehavior alloc]initWithItems:@[paddleView]];
-                             
+    blockDynamicBehavior = [[UIDynamicItemBehavior alloc]initWithItems:@[blockView]];
     
     pushBehavior.pushDirection = CGVectorMake(0.5, 1.0);
     pushBehavior.active = YES;
     pushBehavior.magnitude =  0.2;
     [dynamicAnimator addBehavior:pushBehavior];
+    
+    
     
     
     collisionBehavior.collisionMode = UICollisionBehaviorModeEverything;
@@ -53,6 +58,8 @@
     
     [dynamicAnimator addBehavior:collisionBehavior];
     
+    
+    blockDynamicBehavior.density = -10000;
     
     ballDynamicBehavior.allowsRotation = NO;
     ballDynamicBehavior.elasticity = 1.0;
@@ -82,6 +89,35 @@
     }
         
 }
+
+-(void)collisionBehavior:(UICollisionBehavior *)behavior beganContactForItem:(id<UIDynamicItem>)item1 withItem:(id<UIDynamicItem>)item2 atPoint:(CGPoint)p
+{
+    [collisionBehavior removeItem:item2];
+}
+        //id item that is blockview
+//    if ([item1 isKindOfClass:[BlockView class]])
+//    {
+//        BlockView *block = (BlockView*)item1;
+//        [block removeFromSuperview ];
+    
+//     }
+    
+//    for (collisionBehavior.items *x in self.view.subviews)
+//    
+//    if ([x isKindOfClass:[BlockView class]])
+//    {
+//        NSLog(@"item is a block");
+//        //BlockView *block = (BlockView*)item2;
+//        [blockView  removeFromSuperview];
+//        
+//        
+//    }
+//
+//        //remove that item from the array
+//
+//}
+///idea #1 set block value (once hit) = nil
+////idea #2 disappear it out of the frame by setting the xy values to huge numbers
 
 
 @end

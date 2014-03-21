@@ -30,11 +30,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Dl-Df-8sq" customClass="BlockView">
+                                <rect key="frame" x="0.0" y="381" width="328" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.25098040699958801" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="ballView" destination="Ad9-Eu-wu9" id="0zH-Wf-LS7"/>
+                        <outlet property="blockView" destination="7Dl-Df-8sq" id="zn8-hL-Hj9"/>
                         <outlet property="paddleView" destination="NSd-5a-gfW" id="5bC-fm-Q9j"/>
                     </connections>
                 </viewController>
