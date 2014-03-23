@@ -10,5 +10,6 @@
 
 @interface BlockView : UIView
 
--(void) howBlocksAppear;
+-(void)blockViewCollisions;
+
 @end

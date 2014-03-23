@@ -148,37 +148,24 @@
     //for(myBlocks *myBlockViews in self.view.subviews)
     //if ([item2 isKindOfClass:[BlockView class]])
     BlockView* block =  (BlockView*)item2;
-    
-    
     if ([item2 isKindOfClass:[BlockView class]])
  {
-//     [UIView animateWithDuration:10.0 animations:^{
-//         block.backgroundColor = [UIColor greenColor]
-//         ;}];
-    [UIView animateWithDuration:1.0 animations:^{
+     [UIView animateWithDuration:1.0 animations:^{
         block.backgroundColor = [UIColor orangeColor];
         NSLog(@"animating");
     } completion:^(BOOL finished) {
         //[(BlockView*)item2 setBackgroundColor:[UIColor orangeColor]];
         [collisionBehavior removeItem:item2];
-        [myBlocks removeObject:item2];
+        [myBlocks removeObject:(BlockView*)item2];
         //you can only remove a view from itʻs Superview
         [(BlockView*)item2 removeFromSuperview];
-        //[dynamicAnimator ]
         [dynamicAnimator updateItemUsingCurrentState:item2];
     }];
      
-//     //[(BlockView*)item2 setBackgroundColor:[UIColor orangeColor]];
-//     [collisionBehavior removeItem:item2];
-//     [myBlocks removeObject:item2];
-//     //you can only remove a view from itʻs Superview
-//     [(BlockView*)item2 removeFromSuperview];
-//     //[dynamicAnimator ]
-//     [dynamicAnimator updateItemUsingCurrentState:item2];
  }
     if ([myBlocks count] == 0)
     {
-        shouldStartAgain = YES;
+        //shouldStartAgain = YES;
         [self resetGame];
     }
     
