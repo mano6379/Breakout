@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UICollisionBehaviorDelegate>
+@interface ViewController : UIViewController <UICollisionBehaviorDelegate, UIAlertViewDelegate>;
 
 @end

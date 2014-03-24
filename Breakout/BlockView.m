@@ -19,11 +19,6 @@
     return self;
 }
 
--(void)blockViewCollisions
-{
-    
-}
-
 
 
 /*

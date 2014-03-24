@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NSd-5a-gfW" customClass="PaddleView">
-                                <rect key="frame" x="117" y="308" width="73" height="21"/>
+                                <rect key="frame" x="55" y="341" width="131" height="10"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -30,17 +30,22 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Dl-Df-8sq" customClass="BlockView">
-                                <rect key="frame" x="0.0" y="381" width="328" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSV-U8-UDF">
+                                <rect key="frame" x="222" y="425" width="51" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
+                                <state key="normal" title="Launch">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onLaunchButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MP2-S4-X3Q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.25098040699958801" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="ballView" destination="Ad9-Eu-wu9" id="0zH-Wf-LS7"/>
-                        <outlet property="blockView" destination="7Dl-Df-8sq" id="zn8-hL-Hj9"/>
+                        <outlet property="launchButton" destination="cSV-U8-UDF" id="1xk-9f-1gc"/>
                         <outlet property="paddleView" destination="NSd-5a-gfW" id="5bC-fm-Q9j"/>
                     </connections>
                 </viewController>
